@@ -68,7 +68,7 @@ const sendToPrinter = (zplCommandString, printerIp, printerPort) => {
     { host: printerIp, port: printerPort },
     () => {
       console.log(`Connected to printer at ${printerIp}:${printerPort}`);
-      client.write(zplCommandString);//, "utf-8");
+      client.write(zplCommandString, "utf-8");
       client.end();
     }
   );
